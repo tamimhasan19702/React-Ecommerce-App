@@ -12,7 +12,9 @@ class App extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({meaningOflLife: this.state.meaningOflLife + 1});
+    this.setState({meaningOflLife: this.state.meaningOflLife + 1}, () => console.log(this.state.meaningOflLife));
+
+    console.log(`2 -> ${this.state.meaningOflLife}`);
   }
 
 
