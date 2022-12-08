@@ -7,20 +7,21 @@ class App extends React.Component {
   constructor(Props){
     super(Props)
     this.state = {
-      meaningOflLife : 47
+      showChild: true,
+      text: ''
     }
   }
 
-  handleClick = () => {
-    this.setState((prevState , prevProps) => {
+  // handleClick = () => {
+  //   this.setState((prevState , prevProps) => {
      
-      return {meaningOflLife: prevState.
-        meaningOflLife + prevProps.increment}
+  //     return {meaningOflLife: prevState.
+  //       meaningOflLife + prevProps.increment}
     
-    }, 
-    () => console.log(this.state.meaningOflLife));
+  //   }, 
+  //   () => console.log(this.state.meaningOflLife));
 
-  }
+  // }
 
 
   render(){
@@ -31,15 +32,29 @@ class App extends React.Component {
           <p>
             {this.state.meaningOflLife}
           </p>
-          <button onClick={this.handleClick}>Update State</button>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          
+          <button 
+          onClick={() => 
+            this.setState( state => ({
+              showChild: !state.showChild
+            }))
+          }
+            >
+            Toggle LifeCycle
+            </button>
+            
+          <button
+          onClick={() => 
+          this.setState( state => ({
+            text: state.text + '_hello'
+          }))
+          }
+          >update Text
+          </button>
+
+
+         {/* {this.state.showChild ? } */}
+
         </header>
       </div>
     );
