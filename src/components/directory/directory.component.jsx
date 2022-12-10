@@ -1,5 +1,6 @@
 import React ,{Component} from 'react';
 import MenuItem from '../menu-item/menu-item.component';
+import './directory.scss'
 
 class Directory extends Component {
 constructor(){
@@ -44,6 +45,7 @@ render(){
                 <MenuItem 
                 key={id}
                 title={title}
+                imageUrl={imageUrl}
                 />
             ))
         }
