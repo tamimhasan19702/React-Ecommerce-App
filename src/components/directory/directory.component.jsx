@@ -1,6 +1,7 @@
-import React ,{Component} from 'react'
+import React ,{Component} from 'react';
+import MenuItem from '../menu-item/menu-item.component';
 
-class directory extends Component {
+class Directory extends Component {
 constructor(){
     super();
 
@@ -35,8 +36,23 @@ constructor(){
   }
 }
 
+render(){
+    return(
+        <div className="directory-menu">
+        {
+            this.state.section.map(({title,imageUrl, id}) => (
+                <MenuItem 
+                key={id}
+                title={title}
+                />
+            ))
+        }
+        </div>
+    )
+}
+
 
 
 }
 
-export default directory
+export default Directory
