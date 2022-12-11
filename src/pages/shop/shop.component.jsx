@@ -19,8 +19,11 @@ render(){
 
     return(<div className='shop-page'>
           {
-            collections.map(({id, ...otherComponents }) => (
-            <PreviewCollection key={id} {...otherComponents}/>
+            collections
+            .map(({id, ...otherComponents }) => (
+            <PreviewCollection 
+            key={id} 
+            {...otherComponents}/>
             ))
           }
         </div>);
