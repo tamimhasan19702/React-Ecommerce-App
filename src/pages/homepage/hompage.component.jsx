@@ -3,10 +3,10 @@ import Directory from '../../components/directory/directory.component';
 import './homepage.scss';
 
 
-function Homepage({history}) {
+function Homepage() {
   return (
     <div className='homepage'>
-      <Directory history={history}/>
+      <Directory />
     </div>
   )
 }

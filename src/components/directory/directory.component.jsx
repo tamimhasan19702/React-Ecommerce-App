@@ -49,6 +49,7 @@ render(){
         <div className="directory-menu">
         {
             this.state.section.map(({id, ...otherSectionProps}) => (
+                
                 <MenuItem 
                 key={id}
                 {...otherSectionProps}
