@@ -1,13 +1,13 @@
 import React from 'react';
 import './preview-collection.style.css';
 
-function previewCollection({title, items}) {
+function PreviewCollection({ title , items}) {
   return (
     <div className='collection-preview'>
      <h1 className='title'>{title.toUpperCase()}</h1>
      <div className="preview">
         {
-              items.map(item => (
+              items.map((item) => (
                 <div key={item.id}>{item.name}</div>
             ))
         }
@@ -16,4 +16,4 @@ function previewCollection({title, items}) {
   )
 }
 
-export default previewCollection
+export default PreviewCollection
