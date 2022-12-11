@@ -49,6 +49,7 @@ render(){
                 title={title}
                 imageUrl={imageUrl}
                 size={size}
+                history={this.props.history}
                 />
             ))
         }
