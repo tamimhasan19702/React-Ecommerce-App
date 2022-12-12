@@ -5,7 +5,7 @@ import Homepage from './pages/homepage/hompage.component';
 import shopComponent from './pages/shop/shop.component';
 import HeaderComponent from './components/header/Header.component';
 
-
+ 
 function App () {
   
     return (
@@ -17,6 +17,8 @@ function App () {
             <Route exact path='/'  component={Homepage} /> 
 
             <Route path='/shop' component={shopComponent}/> 
+
+            
 
         </Switch>
        
