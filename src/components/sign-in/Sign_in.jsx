@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './sign_in.style.scss';
 import FormInput from '../form-input/FormInput';
+import CustomButton from '../customButton/CustomButton';
 
 class SignIn extends Component {
 
@@ -53,7 +54,7 @@ class SignIn extends Component {
         type='password'
         label='Password'/>
         
-        <input type="submit" value='Submit Form'/>
+        <CustomButton type="submit"> Sign In</CustomButton>
        
        </form>
 
