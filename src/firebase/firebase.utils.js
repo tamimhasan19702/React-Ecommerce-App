@@ -1,6 +1,6 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const config = {
     apiKey: "AIzaSyBc9rnpgI5FKzBWtrM8WQWSi1T2SaYSQMk",
@@ -13,3 +13,13 @@ const config = {
 }
 
 firebase.initializeApp(config);
+
+export const auth = firebase.auth();
+// export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({ prompt: 'select_account'});
+
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+
+export default firebase;
