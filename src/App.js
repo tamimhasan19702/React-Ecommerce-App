@@ -45,6 +45,7 @@ class App extends Component {
         this.unsubscribeFromAuth();
     }
 
+    // test comment
 
     render(){
         return (
