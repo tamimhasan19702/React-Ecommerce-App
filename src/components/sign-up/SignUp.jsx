@@ -13,7 +13,7 @@ export default class SignUp extends Component {
       displayName: '',
       email: '',
       password: '',
-      confirmPassword: ''
+      confirmPassword: '',
     }
   }
 
@@ -24,7 +24,7 @@ export default class SignUp extends Component {
     const { displayName, email, password, confirmPassword } = this.state;
 
     if(password !== confirmPassword) {
-      alert (`passoword don't match`);
+      alert (`password don't match`);
       return;
     }
 
@@ -33,6 +33,7 @@ export default class SignUp extends Component {
     const { user } = await auth.createUserWithEmailAndPassword(
       email,
       password
+
     );
 
     await createUserProfileDocument(user, { displayName });
@@ -45,7 +46,7 @@ export default class SignUp extends Component {
     });
 
     }catch(error){
-     console.error(error);
+     alert(error);
     }
   }
 
@@ -57,12 +58,14 @@ export default class SignUp extends Component {
 
   render() {
     
-    const {displayName, email, password, confirmPassword} = this.state;
+    const { displayName, email, password, confirmPassword } = this.state;
 
     return (
       <div className='sign-up'>
+        
            <h2 className='title'>I do not have a account</h2>
            <span>Sign up with your email and password</span>
+
            <form className='sign-up-form' onSubmit={this.handleSubmit}>
               
               <FormInput 
