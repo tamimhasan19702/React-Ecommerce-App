@@ -4,7 +4,6 @@ import { Route } from 'react-router';
 import CollectionOverview from '../../components/collection-overview/collectionOverview';
 import CollectionPage from '../collection/collection.component';
 
-
 const shopComponent = ({match}) => {
 
     return(
